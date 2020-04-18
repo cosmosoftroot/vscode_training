@@ -1,8 +1,9 @@
 # Emmet
 
+- Es un plugin para editores de texto para mejores el flujo de trabajo con HTML y CSS. 
+- Emmet está integrado en Visual Studio Code, no se requiere instalar una extensión.
+
 ## HTML 
-
-
 
 ### Estructura básica archivo HTML
 
@@ -184,18 +185,166 @@ Ejemplo estructura de un post
 		<span class="date">yyyy-mm-dd</span>
 		<div class="content">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam molestiae placeat nesciunt, provident et quasi maiores ducimus rerum. Dolore dicta doloremque laudantium dignissimos debitis at ipsum cum ut quidem? Rerum!</div>
 	</div>
+	
+	
+	
+## ES7 React/Redux/GraphQL/React-Native snippets
+
+### Que es un snippet?
+
+Son pequeños fragmentos de código que pueden ser reusables en nuestros scripts. 
+
+### React Components
+
+
+React Component Class -> **rcc + tab**
+	
+
+	import React, { Component } from 'react'
+
+	export default class Header extends Component {
+	    render() {
+		return (
+		    <div>
+		        
+		    </div>
+		)
+	    }
+	}
+
+
+React Component Class -> **rce + tab**
+
+	import React, { Component } from 'react'
+
+	export class Header extends Component {
+	    render() {
+		return (
+		    <div>
+		        
+		    </div>
+		)
+	    }
+	}
+
+	export default Header
+	
+	
+Component Did Mount -> **cdm + tab**	
+
+	componentDidMount() {
+        
+    	}
+
+Component Will Unmount -> **cwu + tab**
+
+	componentWillUnmount() {
 	    
-## JSX in VSCode
+	}
+		
+
+React Pure Component -> **rpc + tab**
+
+	import React, { PureComponent } from 'react'
+
+	export default class Header extends PureComponent {
+	    render() {
+		return (
+		    <div>
+		        
+		    </div>
+		)
+	    }
+	}
+
+React Pure Component -> **rpc + tab**
+
+	import React, { PureComponent } from 'react'
+
+	export class Header extends PureComponent {
+	    render() {
+		return (
+		    <div>
+		        
+		    </div>
+		)
+	    }
+	}
+
+	export default Header
+
+React Functional Component -> **rfc + tab**
+
+	import React from 'react'
+
+	export default function Header() {
+	    return (
+		<div>
+		    
+		</div>
+	    )
+	}
+
+React Functional Component -> **rfe + tab**
+
+	import React from 'react'
+
+	function Header() {
+	    return (
+		<div>
+		    
+		</div>
+	    )
+	}
+
+	export default Header
+
+
+anonymous function -> **anfn + tab**
+	   
+	(params) => {
+		
+	    }
+
+React component class with connected redux -> **rcredux +tab**
+
+	import React, { Component } from 'react'
+	import { connect } from 'react-redux'
+
+	export class Header extends Component {
+	    render() {
+		return (
+		    <div>
+		        
+		    </div>
+		)
+	    }
+	}
+
+	const mapStateToProps = (state) => ({
+	    
+	})
+
+	const mapDispatchToProps = {
+	    
+	}
+
+	export default connect(mapStateToProps, mapDispatchToProps)(Header)
+
+	   
+	    
+## Emmet - JSX in VSCode
 
 Configuar emmet para JSX
 
 - Preferences + Settings + click in Open settings JSON
-- También ctrl + shift + p -> escribir settings -> seleccionar Open settings JSON
-- Incluir en JSON de configuración
+- También ctrl + shift + p -> Open settings JSON
+- Incluir en el JSON de configuración
 
 
 	"emmet.includeLanguages":{
 		"javascript": "javascriptreact"
 	}
+	
 
 - `ctrl + shift + p -> reload window`
