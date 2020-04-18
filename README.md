@@ -1,21 +1,53 @@
 # Emmet
 
-## HTML shortcuts
+## HTML 
 
-Estructura básica archivo HTML
+
+
+### Estructura básica archivo HTML
 
  	! + tab
+
+### Construcción de elementos simples
+
  
- Autocompleta etiqueta + inner Text
+ Autocompletar etiqueta + inner Text
  
- 	div{hola} + tab
+ 	h1{Hola PlatziMasters} + tab
  	
- 	<div>hola</div>
+ 	<h1>Hola PlatziMasters</h1>
  
- 
- Crear elementos con append childs
- 
- 
+Div con id
+
+	#main + tab
+	
+	<div id="main"></div>
+	
+Etiqueta con id
+
+	img#logo
+	
+	<img src="" alt="" id="logo">	
+	
+Etiqueta con id y clase
+
+	img#logo.big
+	
+	<img src="" alt="" id="logo" class="big">
+	
+Etiqueta con id y varias clases
+		
+	div#container.border.red
+	
+	<div id="container" class="border red"></div>
+
+### Operador >
+
+
+El operador `>` hace referencia a elementos hijo
+
+Creación de elementos con elementos hijo
+  
  	div>ul>li + tab
  	
 	<div>
@@ -26,32 +58,32 @@ Estructura básica archivo HTML
 	
 Multiplicar elementos
 
-
 	div>ul>li*5
 	
 	<div>
 		<ul>
-		    <li></li>
-		    <li></li>
-		    <li></li>
-		    <li></li>
-		    <li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
 		</ul>
-	    </div> 
+	</div> 
 	    
-Multiplicar elemento con texto
+Multiplicar elementos con texto
 
 
 	div>ul>li{elemento}*5
+	
 	<div>
 		<ul>
-		    <li>elemento</li>
-		    <li>elemento</li>
-		    <li>elemento</li>
-		    <li>elemento</li>
-		    <li>elemento</li>
+			<li>elemento</li>
+			<li>elemento</li>
+			<li>elemento</li>
+			<li>elemento</li>
+			<li>elemento</li>
 		</ul>
-	    </div>	
+	</div>	
 	
 Multiplicar elemento con texto + autoincremento
 
@@ -59,17 +91,17 @@ Multiplicar elemento con texto + autoincremento
 	
 	<div>
 		<ul>
-		    <li>elemento: 1</li>
-		    <li>elemento: 2</li>
-		    <li>elemento: 3</li>
-		    <li>elemento: 4</li>
-		    <li>elemento: 5</li>
+			<li>elemento: 1</li>
+			<li>elemento: 2</li>
+			<li>elemento: 3</li>
+			<li>elemento: 4</li>
+			<li>elemento: 5</li>
 		</ul>
-	    </div>		
+	</div>
 	
 Multiplicar elemento con texto + autoincremento desde un número requerido
 
-	div>ul>li>{Calle $@150}*6
+	div>ul>il{Calle $@150}*5
 	
 	<div>
 		<ul>
@@ -84,33 +116,11 @@ Multiplicar elemento con texto + autoincremento desde un número requerido
 		</ul>
 	    </div>
 
-Capa con id
 
-	#main + tab
-	
-	<div id="main"></div>
-	
-Etiqueta con id
 
-	img#photo
+### Operador +
 	
-	<img src="" alt="" id="photo">	
-	
-Etiqueta con id y clase
-
-	img#photo.big
-	
-	<img src="" alt="" id="photo" class="big">
-	
-Etiqueta con id y varias clases
-
-		
-	div#container.border.red
-	
-	<div id="container" class="border red"></div>
-	
-El operador `>` hace referencia a operadores hijo, en caso de elementos en el mismo nivel se usa `+`
-
+En caso de elementos en el mismo nivel se usa `+`
 
 	div>img+div.header
 	
@@ -139,7 +149,23 @@ Agrupar elementos usando `()`
 		</div>
 	    </div>
 
-Usando todos los shorcuts antes vistos
+**Usando todos los shortcuts antes vistos**
+
+
+Ejemplo de menu
+
+	ul#menu>(li.nav>a:link>{Pagina $})*5
+	
+	<ul id="menu">
+		<li class="nav"><a href="http://">Pagina 1</a></li>
+		<li class="nav"><a href="http://">Pagina 2</a></li>
+		<li class="nav"><a href="http://">Pagina 3</a></li>
+		<li class="nav"><a href="http://">Pagina 4</a></li>
+		<li class="nav"><a href="http://">Pagina 5</a></li>
+	</ul>
+
+
+Maquetación simple
 
 	div#main-container>header+main+footer 
 	
@@ -151,13 +177,13 @@ Usando todos los shorcuts antes vistos
 
 Ejemplo estructura de un post
 
-	(div.post>h2.title+span.date+div.content>lorem)*5
+	(div.post>h2.title{Titulo}+span.date{yyyy-mm-dd}+div.content>lorem)*5
 	
 	<div class="post">
-		<h2 class="title"></h2>
-		<span class="date"></span>
-		<div class="content">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magnam iste architecto facere reprehenderit. Qui, commodi dicta obcaecati quod doloribus officiis error porro optio eum, doloremque repudiandae itaque nisi quasi natus.</div>
-	    </div> ... * 5
+		<h2 class="title">Titulo</h2>
+		<span class="date">yyyy-mm-dd</span>
+		<div class="content">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam molestiae placeat nesciunt, provident et quasi maiores ducimus rerum. Dolore dicta doloremque laudantium dignissimos debitis at ipsum cum ut quidem? Rerum!</div>
+	</div>
 	    
 ## JSX in VSCode
 
